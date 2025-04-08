@@ -4,10 +4,9 @@
 #include <cstdint>
 #include <vector>
 
-// all of your function definitions should be in this file now
-
 class Matrix {
 public:
+    std::vector<std::vector<int>> data; // creates a member variable that stores all the matrix data - not sure why this wasn't included in the code we were given
     Matrix(std::size_t N);
     Matrix(std::vector<std::vector<int>> nums);
 

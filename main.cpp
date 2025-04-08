@@ -3,7 +3,7 @@
 
 #include <iostream> // allows for input output stream access
 #include <fstream> // allows for file to be read as a stream aka line by line
-#include "Matrix.hpp" // adds the matrix header file that has the predefined functions 
+#include "matrix.hpp" // adds the matrix header file that has the predefined functions 
 
 int main() { // starts main 
     std::string filename; //create a variable for the filename
@@ -18,6 +18,8 @@ int main() { // starts main
 
     int N;  // integer variable for the size of the matrix
     file >> N;  // get the value of the matrix size from the file
+    int C; // integer to store if its double or int
+    file >> C; // get said value from file
     std::cout << "Matrix size: " << N << std::endl; //output the matrix size to the terminal
 
     std::vector<std::vector<int>> matrix_data_1(N, std::vector<int>(N)); //declares a new 2d matrix with vectors of size N
