@@ -5,7 +5,7 @@ CXX = g++
 TARGET = program
 
 # Source files
-SRC = main.cpp matrix.cpp
+SRC = main.cpp
 
 # Default rule to compile everything in one step
 all: $(TARGET)
