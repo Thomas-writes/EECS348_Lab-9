@@ -99,7 +99,7 @@ int main() { // starts main
         }
 
     }
-    else if (C == 1) {
+    else if (C == 1) { // pretty much copy and pasted the int one into here but changed vectors to doubles
         std::vector<std::vector<double>> matrix_data_1(N, std::vector<double>(N)); //declares a new 2d matrix with vectors of size N
         for (int i = 0; i < N; i++) { // this is a loop used until i = N
             for (int j = 0; j < N; j++) { // this is a loop used until j = N
