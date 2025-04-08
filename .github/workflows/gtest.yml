@@ -6,17 +6,14 @@ on:
     branches: [ "main" ]
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Build googletest
         run: |
           cmake -S . -B build -DBUILD_GMOCK=OFF
           cmake --build build
-        shell: cmd
       - name: Run googletest
         run: |
-          set GTEST_COLOR=1
-          cd build\tests
-          ctest --output-on-failure
-        shell: cmd
+          export GTEST_COLOR=1
+          cd build/tests && ctest --output-on-failure
